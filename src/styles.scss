@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Share+Tech+Mono&display=swap');
+
+body {
+    // background-color: black;
+    background-image: url('https://images.wallpaperscraft.ru/image/single/planeta_kratery_kosmos_svet_61032_2560x1600.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 22px;
+    margin: 0;
+    color: white;
+    // font-family: 'PT Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
+}
+a {
+    text-decoration: none;
+    // color: white;
+}
