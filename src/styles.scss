@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Share+Tech+Mono&display=swap');
 
 body {
-    background-color: black;
-    // background-image: url('https://images.wallpaperscraft.ru/image/single/galaktika_planety_svet_zvezdy_luchi_63575_1400x1050.jpg');
+    // background-color: black;
+    background-image: url('https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80');
+    // background-image: url('/src/assets/planets/mars/Mars.png');
+    
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 22px;
     margin: 0;
     color: white;
+    overflow-x: hidden;
     // font-family: 'PT Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
 }
