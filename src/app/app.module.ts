@@ -9,7 +9,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { DestinationsComponent } from './pages/destinations/destinations.component';
-
+import { PreviewComponent } from './components/preview/preview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { DestinationsComponent } from './pages/destinations/destinations.compone
     AboutComponent,
     HomeComponent,
     ExperienceComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
