@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { DestinationsComponent } from './pages/destinations/destinations.component';
 import { PreviewComponent } from './components/preview/preview.component';
+import { SystemComponent } from './components/system/system.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,11 +21,13 @@ import { PreviewComponent } from './components/preview/preview.component';
     HomeComponent,
     ExperienceComponent,
     DestinationsComponent,
-    PreviewComponent
+    PreviewComponent,
+    SystemComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,29 @@
+
+<div class="mainContainer">
+        <div class="titleContainer">
+                <div>UNFORGETTABLE ADVENTURE</div>
+                <h1 class="mainTitle">CHOOSE YOUR DESTINATION</h1>
+        </div>
+   
+        <div class="systemContainer">
+                <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalEarth">
+            
+                <img src="../../../assets/orbitals/mars/orbitalMars.svg" class="marsOrbital" alt=""/>
+                <div class="earthItems" [ngClass]="{ 'noneAnimation': selectPlanet }" >
+                        <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalMoon"/>
+                        <img src="../../../assets/planets/earth/HTV-HalseyComputer-Earth.webp" class="earth"  (click)="handleClick()" alt=""/>           
+                        <img src="../../../assets/planets/earth/RS-Header-Moon_840px_3.webp" alt="" class="moon" [ngClass]="{ 'noneAnimation': selectPlanet }" (click)="handleClick()"/>
+                </div>
+                <div class="marsItem">
+                      
+                        <!-- <div class="test"> -->
+                        
+                                <img src="../../../assets/planets/mars/Mars.png" class="mars" alt="" [ngClass]="{ 'noneAnimation': selectPlanet }"  (click)="handleClick()"/>
+                        <!-- </div> -->
+                        
+        
+                </div>
+                <!-- <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalMars"/> -->
+        </div>
+        
+</div>
