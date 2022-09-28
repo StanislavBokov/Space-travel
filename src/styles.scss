@@ -13,8 +13,20 @@ body {
     overflow-x: hidden;
     // font-family: 'PT Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
+
+    
 }
 a {
     text-decoration: none;
     // color: white;
 }
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: black;
+    border-radius: 15px;
+    position: relative;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 41, 41);
+    border-radius: 15px;
+  }
