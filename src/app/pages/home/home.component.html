@@ -1,2 +1,7 @@
 <app-preview></app-preview>
-<app-system></app-system>
+<app-system 
+    [handleClick]="handleClick" 
+    [isOpenPlanet]="isOpenPlanet"
+  
+></app-system>
+<app-modal *ngIf="isOpenPlanet" [handleClick]="handleClick" [selectedPlanet]="selectedPlanet"></app-modal>

@@ -12,6 +12,7 @@ import { DestinationsComponent } from './pages/destinations/destinations.compone
 import { PreviewComponent } from './components/preview/preview.component';
 import { SystemComponent } from './components/system/system.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalComponent } from './components/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DestinationsComponent,
     PreviewComponent,
     SystemComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
