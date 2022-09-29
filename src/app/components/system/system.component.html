@@ -7,24 +7,19 @@
    
         <div class="systemContainer">
                 <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalEarth">
-                <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalEarth">
+                
             
                 <img src="../../../assets/orbitals/mars/orbitalMars.svg" class="marsOrbital" alt=""/>
+
+                <img src="../../../assets/orbitals/jupiter/orbitalJupiter.svg" alt="" class="orbitalJupiter">
+                <img src="../../../assets/planets/Jupiter/jupiter.png" alt="" class="jupiter"  data-planet="jupiter" [ngClass]="{ 'noneAnimation': isOpenPlanet }" (click)="handleClick($event)">
                 <div class="earthItems" [ngClass]="{ 'noneAnimation': isOpenPlanet }" >
                         <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalMoon"/>
                         <img src="../../../assets/planets/earth/HTV-HalseyComputer-Earth.webp" class="earth" data-planet="earth" (click)="handleClick($event)" alt=""/>           
                         <img src="../../../assets/planets/earth/RS-Header-Moon_840px_3.webp" alt="" class="moon" [ngClass]="{ 'noneAnimation': isOpenPlanet }" data-planet="moon" (click)="handleClick($event)"/>
                 </div>
                 <div class="marsItem">
-                      
-                        <!-- <div class="test"> -->
-                        
-                                <img src="../../../assets/planets/mars/Mars.png" class="mars" alt="" [ngClass]="{ 'noneAnimation': isOpenPlanet }"  data-planet="mars" (click)="handleClick($event)"/>
-                        <!-- </div> -->
-                        
-        
+                                <img src="../../../assets/planets/mars/Mars.png" class="mars" alt="" [ngClass]="{ 'noneAnimation': isOpenPlanet }"  data-planet="mars" (click)="handleClick($event)"/>    
                 </div>
-                <!-- <img src="../../../assets/orbitals/earth/orbital.svg" alt="" class="orbitalMars"/> -->
         </div>
-        
 </div>

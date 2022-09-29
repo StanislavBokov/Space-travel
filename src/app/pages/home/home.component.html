@@ -2,6 +2,10 @@
 <app-system 
     [handleClick]="handleClick" 
     [isOpenPlanet]="isOpenPlanet"
-  
+
 ></app-system>
-<app-modal *ngIf="isOpenPlanet" [handleClick]="handleClick" [selectedPlanet]="selectedPlanet"></app-modal>
+<app-modal 
+    *ngIf="isOpenPlanet" 
+    [handleClick]="handleClick" 
+    [selectedAstrObject]="selectedAstrObject"
+></app-modal>
