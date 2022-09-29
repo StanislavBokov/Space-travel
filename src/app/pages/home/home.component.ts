@@ -1,6 +1,7 @@
+import { AstrObject } from './../../models/astronomicalOblect';
 import { Component, OnInit } from '@angular/core';
-import { planets as data } from '../../mock/planets/mockPLanets'
-import { AstronomicalObject } from 'src/app/models/astronomicalOblect';
+import { astrObject as data } from '../../mock/planets/mockPLanets'
+
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { AstronomicalObject } from 'src/app/models/astronomicalOblect';
 export class HomeComponent implements OnInit {
 
   isOpenPlanet = false
-  selectedPlanet:any = null
+  selectedAstrObject:AstrObject
 
   planets = data
   constructor() { }
@@ -18,16 +19,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  handleClick = (event: any) => {
+  handleClick = (event: Event) => {
     if(event) {
-      console.log(event.target.dataset.planet);
-      this.selectedPlanet = this.planets.find((el) => el.id === event.target.dataset.planet)
-      console.log(  this.selectedPlanet);
-      
+      this.selectedAstrObject = (this.planets.find((el) => el.id === (event.target as HTMLElement).dataset.planet))!
     }
- 
-    
+
     this.isOpenPlanet = !this.isOpenPlanet
-    console.log(this.isOpenPlanet); 
   }
 }

@@ -1,7 +1,9 @@
 <div class="container" (click)="handleClick()">
     <div class="content" (click)="onEvent($event)">
-        <h3>{{ selectedPlanet.title }}</h3>
-        <p>{{ selectedPlanet.description }}</p>
-        <button class="btnModal">MORE INFO</button>
+        <h3>{{ selectedAstrObject.title }}</h3>
+        <p>{{ selectedAstrObject.description }}</p>
+        <button class="btnModal">
+            <a [routerLink]="['aboutAstronomicalObject', selectedAstrObject.id]">MORE INFO</a>
+        </button>
     </div>
 </div>

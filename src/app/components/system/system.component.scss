@@ -2,11 +2,11 @@
 
 @keyframes move { 
     100% { 
-       offset-distance: 100%
+       offset-distance: 50%
       }
 }
+
 .noneAnimation {
-    // animation: move  !important;
     animation-play-state: paused !important;
 }
 .mainContainer {
@@ -27,9 +27,12 @@
     }
  
     .systemContainer {
+        transform: translate(100px);
+        // border:1px solid red;
         text-align: center;
         margin-top: 150px;
         margin-bottom: 300px;
+        // min-width: 1300px;
         position: relative;
     
         .orbitalEarth {
@@ -38,7 +41,31 @@
             left:150px;
     
         }
-    
+        .orbitalJupiter {
+            position: absolute;
+            left:-140px;
+            top:-140px;
+            // &:hover {
+            //     background-color: red;
+            // }
+            z-index: -10;
+        }
+        .jupiter {
+            transform: translate(900px, 460px);
+            width: 150px;
+            z-index: 10;
+          
+         
+            offset-path: path('M1029.5 369C1029.5 470.694 971.972 562.807 878.869 629.516C785.766 696.224 657.121 737.5 515 737.5C372.879 737.5 244.234 696.224 151.131 629.516C58.0278 562.807 0.5 470.694 0.5 369C0.5 267.306 58.0278 175.193 151.131 108.484C244.234 41.7756 372.879 0.5 515 0.5C657.121 0.5 785.766 41.7756 878.869 108.484C971.972 175.193 1029.5 267.306 1029.5 369Z');
+            animation: move 644 linear infinite;
+            offset-rotate: 180deg;
+            
+            &:hover {
+                box-shadow: 0 0 10px 0  rgb(68, 39, 39);;
+                border-radius: 50%;
+                // background-color: red;
+            }
+        }
         .earthItems {
             offset-path: path('M449.5 134.5C449.5 171.396 424.48 204.885 383.842 229.177C343.215 253.463 287.057 268.5 225 268.5C162.943 268.5 106.785 253.463 66.1575 229.177C25.5202 204.885 0.5 171.396 0.5 134.5C0.5 97.6044 25.5202 64.1154 66.1575 39.8233C106.785 15.5374 162.943 0.5 225 0.5C287.057 0.5 343.215 15.5374 383.842 39.8233C424.48 64.1154 449.5 97.6044 449.5 134.5Z');
             animation: move 60s linear infinite;
@@ -50,34 +77,37 @@
                 border-radius: 50%;    
                 z-index: 110;
                 &:hover {
-                    box-shadow: 0 0 20px 0 rgb(189, 189, 189);
+                    box-shadow: 0 0 10px 0 rgb(189, 189, 189);
                 }
        
             }
             .orbitalMoon {
                 position: absolute;
                 top: -75px;
-                left: 160px; 
+                left: 240px; 
                 z-index: -2;
+
+             
             }
             .moon {
                 width: 100px;
                 position: absolute;
                 top: -75px;
-                left: 170px; 
+                left: 240px; 
                 offset-path: path('M422.5 132C422.5 168.216 398.978 201.079 360.788 224.914C322.606 248.744 269.826 263.5 211.5 263.5C153.174 263.5 100.394 248.744 62.2116 224.914C24.0218 201.079 0.5 168.216 0.5 132C0.5 95.7842 24.0218 62.9209 62.2116 39.0861C100.394 15.2557 153.174 0.5 211.5 0.5C269.826 0.5 322.606 15.2557 360.788 39.0861C398.978 62.9209 422.5 95.7842 422.5 132Z');
                 animation: move 4.5s linear infinite;
                 offset-rotate: 180deg;
                 position: absolute;
                 border-radius: 50%;
                 &:hover {
-                    box-shadow: 0 0 20px rgb(77, 75, 75);
+                    box-shadow: 0 0 10px rgb(77, 75, 75);
                 }
+                
             }
         }
      
         .marsItem {
-            transform: translate(-340px,-580px);
+            transform: translate(-400px,-580px);
       
             .mars {
                 offset-path: path('M752.5 230C752.5 293.273 710.516 350.636 642.465 392.208C574.423 433.774 480.391 459.5 376.5 459.5C272.609 459.5 178.577 433.774 110.535 392.208C42.4839 350.636 0.5 293.273 0.5 230C0.5 166.727 42.4839 109.364 110.535 67.7921C178.577 26.2257 272.609 0.5 376.5 0.5C480.391 0.5 574.423 26.2257 642.465 67.7921C710.516 109.364 752.5 166.727 752.5 230Z');
@@ -87,7 +117,7 @@
     
                 border-radius: 50%;
                 &:hover {
-                    box-shadow: 0 0 20px 0 rgb(114, 50, 50);
+                    box-shadow: 0 0 10px 0 rgb(114, 50, 50);
                 }
             }
            

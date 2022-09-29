@@ -13,6 +13,7 @@ import { PreviewComponent } from './components/preview/preview.component';
 import { SystemComponent } from './components/system/system.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './components/modal/modal.component';
+import { AboutAstronomicalObjectComponent } from './pages/about-astronomical-object/about-astronomical-object.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { ModalComponent } from './components/modal/modal.component';
     PreviewComponent,
     SystemComponent,
     ModalComponent,
+    AboutAstronomicalObjectComponent,
   ],
   imports: [
     BrowserModule,

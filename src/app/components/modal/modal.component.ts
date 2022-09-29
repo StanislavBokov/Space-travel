@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AstronomicalObject } from 'src/app/models/astronomicalOblect';
+import { AstrObject } from 'src/app/models/astronomicalOblect';
 
 @Component({
   selector: 'app-modal',
@@ -10,7 +10,7 @@ export class ModalComponent implements OnInit {
 
   constructor() { }
   @Input() handleClick:Function
-  @Input() selectedPlanet: AstronomicalObject
+  @Input() selectedAstrObject: AstrObject
   ngOnInit(): void {
   }
   onEvent(event:Event) {
