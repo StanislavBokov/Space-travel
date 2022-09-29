@@ -2,22 +2,165 @@
 
 @keyframes move { 
     100% { 
-       offset-distance: 50%
+       offset-distance: 100%
       }
 }
+
+
+@keyframes moveEarth { 
+    100% { 
+       offset-distance: 115%
+      }
+}
+@keyframes moveMoon { 
+
+    100% { 
+       offset-distance: 135%
+      }
+}
+
+@keyframes moveMars { 
+100% { 
+       offset-distance: 170%
+      }
+}
+@keyframes mars-europa {
+    // 5% {
+    //     transform: rotate(190deg);
+    // }
+    10% {
+        transform: rotate(217deg);
+    } 
+    20% {
+        transform: rotate(255deg)  scaleX(0.7);; 
+    } 
+    30% {
+        transform: rotate(300deg)   scaleX(0.6);
+    } 
+    40% {
+        transform: rotate(330deg);
+    } 
+    50% {
+        transform: rotate(355deg);
+    } 
+    60% {
+        transform: rotate(383deg);
+    } 
+    70% {
+        transform: rotate(416deg)  scaleX(0.6);;
+    } 
+    80% {
+        transform: rotate(470deg)  scaleX(0.6);;
+    } 
+    90% {
+        transform: rotate(515deg)  scaleX(0.6);;
+    } 
+    100% {
+        transform: rotate(544deg);
+    } 
+}
+@keyframes earth-mars {
+    5% {
+        transform: rotate(-97deg);
+    }
+    10% {
+        transform: rotate(-72deg);
+    }
+    15% {
+        transform: rotate(-51deg) scaleX(1.4);
+    }
+    20% {
+        transform: rotate(-34deg) scaleX(1.4);
+    }
+    30% {
+        transform: rotate(-6deg)  scaleX(1.7);;
+    }
+    40% {
+        transform: rotate(23deg) scaleX(1.7);
+    }
+    50% {
+        transform: rotate(56deg)
+    }
+    55% {
+        transform: rotate(78deg) 
+    }
+    60% {
+        transform: rotate(103deg)
+    }
+    70% {
+        transform: rotate(145deg) scaleX(1.5);
+    }
+    80% {
+        transform: rotate(175deg) scaleX(1.7);
+    }
+    90% {
+        transform: rotate(203deg)  scaleX(1.7);
+    }
+    100% {
+        transform: rotate(240deg) 
+    }
+}
+
+@keyframes moveEuropa { 
+    100% { 
+       offset-distance: 100%
+      }
+}
+@keyframes earth-moon {
+
+    10% {
+            transform: rotate(-17deg);
+        }
+        20% {
+            transform: rotate(15deg);
+        }
+        25% {
+            transform: rotate(30deg) scaleX(0.8);
+        }
+        30% {
+            transform: rotate(50deg) scaleX(0.8);
+        }
+        40% {
+             transform: rotate(95deg) scaleX(0.5);
+        }
+        50% {
+              transform: rotate(140deg) scaleX(0.8);
+        }
+        60% {
+            transform: rotate(170deg) scaleX(1);
+        }
+        70% {
+            transform: rotate(195deg) scaleX(1);
+        }
+
+        80% { 
+            transform: rotate(220deg) scaleX(0.7);;
+            }
+        90% { 
+            transform: rotate(260deg) scaleX(0.8);;
+            }
+        100% { 
+            transform: rotate(310deg) scaleX(0.5);;
+            }
+}
+
 
 .noneAnimation {
     animation-play-state: paused !important;
 }
 .mainContainer {
+    // border: 1px solid red;
     margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     .titleContainer {
         text-align: center;
         max-width: 600px;
         margin: 0 auto;
+        margin-bottom: 400px;
+        // margin-bottom: 200px;
         .mainTitle {
             
             font-size: 66px;
@@ -25,103 +168,147 @@
            
         }
     }
- 
-    .systemContainer {
-        transform: translate(100px);
-        // border:1px solid red;
-        text-align: center;
-        margin-top: 150px;
-        margin-bottom: 300px;
-        // min-width: 1300px;
-        position: relative;
-    
-        .orbitalEarth {
-            position: absolute;
-            top: 100px;
-            left:150px;
-    
-        }
-        .orbitalJupiter {
-            position: absolute;
-            left:-140px;
-            top:-140px;
-            // &:hover {
-            //     background-color: red;
-            // }
-            z-index: -10;
-        }
-        .jupiter {
-            transform: translate(900px, 460px);
-            width: 150px;
-            z-index: 10;
-          
-         
-            offset-path: path('M1029.5 369C1029.5 470.694 971.972 562.807 878.869 629.516C785.766 696.224 657.121 737.5 515 737.5C372.879 737.5 244.234 696.224 151.131 629.516C58.0278 562.807 0.5 470.694 0.5 369C0.5 267.306 58.0278 175.193 151.131 108.484C244.234 41.7756 372.879 0.5 515 0.5C657.121 0.5 785.766 41.7756 878.869 108.484C971.972 175.193 1029.5 267.306 1029.5 369Z');
-            animation: move 644 linear infinite;
-            offset-rotate: 180deg;
-            
+    .marsOrbital {
+        position: absolute;
+        top: 580px;
+
+  
+    }
+
+    .orbitalMoon {
+        transform: translate(20px, 290px);
+        offset-path: path('M499.5 148C499.5 188.621 471.684 225.485 426.522 252.222C381.371 278.951 318.962 295.5 250 295.5C181.038 295.5 118.629 278.951 73.478 252.222C28.3155 225.485 0.5 188.621 0.5 148C0.5 107.379 28.3155 70.5147 73.478 43.7785C118.629 17.0488 181.038 0.5 250 0.5C318.962 0.5 381.371 17.0488 426.522 43.7785C471.684 70.5147 499.5 107.379 499.5 148Z');
+        offset-rotate: 180deg;
+        offset-distance: 15%;
+        animation: moveEarth 90s linear infinite;
+    }
+    .orbitalEuropa {
+        transform: translate(160px, 690px);
+        offset-path: path('M840.5 255.5C840.5 325.813 793.593 389.552 717.579 435.738C641.574 481.92 536.542 510.5 420.5 510.5C304.458 510.5 199.426 481.92 123.421 435.738C47.4072 389.552 0.5 325.813 0.5 255.5C0.5 185.187 47.4072 121.448 123.421 75.2615C199.426 29.0801 304.458 0.5 420.5 0.5C536.542 0.5 641.574 29.0801 717.579 75.2615C793.593 121.448 840.5 185.187 840.5 255.5Z');
+        offset-rotate: 180deg;
+        offset-distance: 70%;
+        animation: moveMars 90s linear infinite;
+    }
+    .marsItems {
+        offset-path: path('M840.5 255.5C840.5 325.813 793.593 389.552 717.579 435.738C641.574 481.92 536.542 510.5 420.5 510.5C304.458 510.5 199.426 481.92 123.421 435.738C47.4072 389.552 0.5 325.813 0.5 255.5C0.5 185.187 47.4072 121.448 123.421 75.2615C199.426 29.0801 304.458 0.5 420.5 0.5C536.542 0.5 641.574 29.0801 717.579 75.2615C793.593 121.448 840.5 185.187 840.5 255.5Z');
+        offset-rotate: 180deg;
+        animation: moveMars 90s linear infinite;
+        offset-distance: 70%;
+        transform: translate(350px, 980px);
+        z-index: 100;
+        .mars {
+            width: 130px;
+           
             &:hover {
-                box-shadow: 0 0 10px 0  rgb(68, 39, 39);;
+                box-shadow: 0 0 10px 0 rgb(122, 84, 84);
                 border-radius: 50%;
-                // background-color: red;
             }
         }
-        .earthItems {
-            offset-path: path('M449.5 134.5C449.5 171.396 424.48 204.885 383.842 229.177C343.215 253.463 287.057 268.5 225 268.5C162.943 268.5 106.785 253.463 66.1575 229.177C25.5202 204.885 0.5 171.396 0.5 134.5C0.5 97.6044 25.5202 64.1154 66.1575 39.8233C106.785 15.5374 162.943 0.5 225 0.5C287.057 0.5 343.215 15.5374 383.842 39.8233C424.48 64.1154 449.5 97.6044 449.5 134.5Z');
-            animation: move 60s linear infinite;
+        .europa {
+            transform: translate(340px, 100px);
+            width: 95px;
+            offset-path: path('M499.5 148C499.5 188.621 471.684 225.485 426.522 252.222C381.371 278.951 318.962 295.5 250 295.5C181.038 295.5 118.629 278.951 73.478 252.222C28.3155 225.485 0.5 188.621 0.5 148C0.5 107.379 28.3155 70.5147 73.478 43.7785C118.629 17.0488 181.038 0.5 250 0.5C318.962 0.5 381.371 17.0488 426.522 43.7785C471.684 70.5147 499.5 107.379 499.5 148Z');
             offset-rotate: 180deg;
-            transform: translate(-130px,370px);
+            offset-distance: 0%;
+            animation: moveEuropa 55s linear infinite;
 
-            .earth {
-                width: 120px;
-                border-radius: 50%;    
-                z-index: 110;
-                &:hover {
-                    box-shadow: 0 0 10px 0 rgb(189, 189, 189);
-                }
-       
-            }
-            .orbitalMoon {
-                position: absolute;
-                top: -75px;
-                left: 240px; 
-                z-index: -2;
 
-             
-            }
-            .moon {
-                width: 100px;
-                position: absolute;
-                top: -75px;
-                left: 240px; 
-                offset-path: path('M422.5 132C422.5 168.216 398.978 201.079 360.788 224.914C322.606 248.744 269.826 263.5 211.5 263.5C153.174 263.5 100.394 248.744 62.2116 224.914C24.0218 201.079 0.5 168.216 0.5 132C0.5 95.7842 24.0218 62.9209 62.2116 39.0861C100.394 15.2557 153.174 0.5 211.5 0.5C269.826 0.5 322.606 15.2557 360.788 39.0861C398.978 62.9209 422.5 95.7842 422.5 132Z');
-                animation: move 4.5s linear infinite;
-                offset-rotate: 180deg;
-                position: absolute;
+            &:hover {
+                box-shadow: 0 0 15px 0 rgb(134, 134, 80);
                 border-radius: 50%;
-                &:hover {
-                    box-shadow: 0 0 10px rgb(77, 75, 75);
-                }
-                
             }
         }
-     
-        .marsItem {
-            transform: translate(-400px,-580px);
-      
-            .mars {
-                offset-path: path('M752.5 230C752.5 293.273 710.516 350.636 642.465 392.208C574.423 433.774 480.391 459.5 376.5 459.5C272.609 459.5 178.577 433.774 110.535 392.208C42.4839 350.636 0.5 293.273 0.5 230C0.5 166.727 42.4839 109.364 110.535 67.7921C178.577 26.2257 272.609 0.5 376.5 0.5C480.391 0.5 574.423 26.2257 642.465 67.7921C710.516 109.364 752.5 166.727 752.5 230Z');
-                animation: move 112s linear infinite;
-                offset-rotate: 180deg;
-                width: 100px;
-    
+ 
+    }
+    .earthItems {
+        offset-path: path('M483.5 136.5C483.5 173.933 456.595 207.924 412.874 232.585C369.169 257.237 308.757 272.5 242 272.5C175.243 272.5 114.831 257.237 71.1258 232.585C27.405 207.924 0.5 173.933 0.5 136.5C0.5 99.0667 27.405 65.0761 71.1258 40.4154C114.831 15.7634 175.243 0.5 242 0.5C308.757 0.5 369.169 15.7634 412.874 40.4154C456.595 65.0761 483.5 99.0667 483.5 136.5Z');
+        offset-rotate: 180deg;
+        offset-distance: 15%;
+        animation: moveEarth 90s linear infinite;
+        transform: translate(180px,1000px);
+
+        // .earthSpan {
+        //     position: absolute;
+        //     transform: rotate(180deg) translate(-45px);
+        // }
+
+        .earth {
+            width: 150px;
+            z-index: 30;
+            &:hover {
+                box-shadow: 0 0 10px 0 rgb(182, 182, 202);
                 border-radius: 50%;
-                &:hover {
-                    box-shadow: 0 0 10px 0 rgb(114, 50, 50);
-                }
+
+                
             }
            
         }
+       
+        .moon {
+            transform: translate(310px, 120px);
+            width: 100px;
+            offset-path: path('M499.5 148C499.5 188.621 471.684 225.485 426.522 252.222C381.371 278.951 318.962 295.5 250 295.5C181.038 295.5 118.629 278.951 73.478 252.222C28.3155 225.485 0.5 188.621 0.5 148C0.5 107.379 28.3155 70.5147 73.478 43.7785C118.629 17.0488 181.038 0.5 250 0.5C318.962 0.5 381.371 17.0488 426.522 43.7785C471.684 70.5147 499.5 107.379 499.5 148Z');
+            offset-rotate: 180deg;
+            animation: moveMoon 55s linear infinite;
+            offset-distance: 35%;
+            // padding: 30px;
+
+            &:hover {
+                box-shadow: 0 0 5px 0 rgb(144, 144, 155);
+                border-radius: 50%;
+            }
+        }
+        .earth-moon {
+            position: absolute;
+            width: 250px;
+            
+            top: 70px;
+            left: -180px;
+            border: 1px dotted rgb(97, 96, 96);
+            transform: rotate(-50deg) scaleX(0.8);
+            transform-origin: 100%;
+            z-index: -10;
+            
+
+            animation: earth-moon 55s linear infinite;
+        }
+       
+    }
+    .earth-mars {
+        position: absolute;
+        width: 370px;
+        transform: rotate(-120deg);
+        transform-origin: 100%;
+        // height: 400px;
+        top:70px;
+        left: -300px;
+        border: 1px dotted rgb(97, 96, 96);
+        z-index: -100;
+        animation: earth-mars 90s linear infinite;
     
     }
+
+    .mars-europa {
+            position: absolute;
+            width:250px;
+            border:1px dotted rgb(97, 96, 96);
+            transform: rotate(185deg);
+            top: 60px;
+            right: 165px;
+            transform-origin: 100%;
+            z-index: -100;
+            animation: mars-europa 55s linear infinite;
+   }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
